@@ -1,10 +1,19 @@
 import React from "react";
 
 const ListGroup = () => {
+  const items = ["galle", "colombo", "kandy"];
+
   return (
-    <ul className="list-group">
-      <li className="list-group-item">An item</li>
-    </ul>
+    <>
+      <h1>List</h1>
+      <ul className="list-group">
+        {items.map((item, index) => (
+          <li key={index} className="list-group-item">
+            {item}
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 
